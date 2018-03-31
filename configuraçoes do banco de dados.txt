@@ -1,0 +1,56 @@
+configuraçoes mongodb
+1- crie uma pasta data c:\
+2- crie uma pasta dentro da pasta data com o nome db
+3-CD PROGRAM FILES/mongodb/server/3.6/bin
+4- dentro da bin /mongod
+5- baixe /o robomongo para fazer a conexão com bd
+
+6 - dentro do robomongo crie seu banco de dados localhost/createdatabase
+7 - pasta collection quarda osdados 
+8 - criando a primeira coleçao de dados / collections/create collection/users
+===============================================================================
+CRIANDO BANCO DE DADOS
+
+9 - munda find para insert/ db.getCollection(' users').insertOne({
+	nome: 'jziel silva',
+	email: 'jeziel_jpl@hotmail.com',
+	idade:  32,
+	brasil: {
+	street: 'Rua dos jesuitas',
+	numero: 21
+},
+	tags: ['a','b','c'],
+	objectNull: null
+
+})
+=======================================================================================
+BUSCAR DADOS DO BANCO
+1- db.getCollection(' users').find({
+	nome 'jziel silva'
+})
+
+2- BUSCA PELO ID
+	db.getCollection(' users').find({
+	_id: ObjectId('e o numero')
+})
+
+==============================================================================
+BUSCANDO SUBDOCUMENTOS
+ db.getCollection('produtos').find({
+	'dim.height': 20,
+	'dim.widht': 5
+})
+==============================================================================
+ATUALIZADO DADOS
+db.getCollection('produtos').updateOne({
+	nome: 'jeziel silva',
+	idade: 31
+},{
+	$set:{
+	idade: 32
+
+	}
+})
+
+
+
