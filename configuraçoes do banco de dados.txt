@@ -1,13 +1,13 @@
-configuraçoes mongodb
+configuraï¿½oes mongodb
 1- crie uma pasta data c:\
 2- crie uma pasta dentro da pasta data com o nome db
 3-CD PROGRAM FILES/mongodb/server/3.6/bin
 4- dentro da bin /mongod
-5- baixe /o robomongo para fazer a conexão com bd
+5- baixe /o robomongo para fazer a conexï¿½o com bd
 
 6 - dentro do robomongo crie seu banco de dados localhost/createdatabase
 7 - pasta collection quarda osdados 
-8 - criando a primeira coleçao de dados / collections/create collection/users
+8 - criando a primeira coleï¿½ao de dados / collections/create collection/users
 ===============================================================================
 CRIANDO BANCO DE DADOS
 
@@ -44,13 +44,43 @@ BUSCANDO SUBDOCUMENTOS
 ATUALIZADO DADOS
 db.getCollection('produtos').updateOne({
 	nome: 'jeziel silva',
-	idade: 31
+	idade: 31 //antiga
 },{
 	$set:{
-	idade: 32
+	idade: 32 //nova idade
 
 	}
 })
+====================================================================
+DELETANDO DADOS
+db.getCollection('produtos').deleteOne({
+_id: '5abead96947329205100112b';
+
+//ou pelo email
+email: ''
+},{
+	$set:{
+	idade: 32 //nova idade
+
+	}
+})
+==================================================
+// Insere varias listas
+db.getCollection('users').insertMany([{
+nome: 'test 1',
+email: 'jeziel_jpl@hotmail.com',
+idade: '32',
+
+},{
+	nome: 'test 2',
+email: 'jeziel_jpl@hotmail.com',
+idade: '32',
+},{
+	nome: 'test 3',
+email: 'jeziel_jpl@hotmail.com',
+idade: '32',
+}])
+
 
 
 
